@@ -7,7 +7,6 @@ import { useIntl } from 'react-intl'
 import { useMenu } from 'material-ui-shell/lib/providers/Menu'
 import { useTheme } from '@mui/material/styles'
 import CustomPaper from '../../components/CustomPaper'
-// import users from '../../config/users'
 
 const SignUp = ({ redirectTo = '/SignUp' }) => {
   const intl = useIntl()
@@ -29,9 +28,6 @@ const SignUp = ({ redirectTo = '/SignUp' }) => {
     })
     const userData = localStorage.getItem("auth");
     console.log(userData);
-    // users(userData)
-    // const { repoUsername, repoEmail, repoPassword, repoConfirmPassword } = userData;
-    // users.JSON.stringify("repoUsername", "repoEmail", "repoPassword", "repoConfirmPassword")
   }
 
   const authenticate = (user) => {

@@ -23,8 +23,10 @@ const SignIn = ({ redirectTo = '/SignIn' }) => {
     event.preventDefault()
     authenticate({
       displayName: username,
-      email: 'username',
+      password: password,
     })
+    const userData = localStorage.getItem("auth");
+    console.log(userData);
   }
 
   const authenticate = (user) => {
