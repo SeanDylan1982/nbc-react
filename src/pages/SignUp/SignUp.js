@@ -7,6 +7,7 @@ import { useIntl } from 'react-intl'
 import { useMenu } from 'material-ui-shell/lib/providers/Menu'
 import { useTheme } from '@mui/material/styles'
 import CustomPaper from '../../components/CustomPaper'
+// import users from '../../config/users.js'
 
 const SignUp = ({ redirectTo = '/SignUp' }) => {
   const intl = useIntl()
@@ -25,24 +26,43 @@ const SignUp = ({ redirectTo = '/SignUp' }) => {
     authenticate({
       displayName: username,
       email: email,
+      password: password,
+      confirmPassword: confirmPassword,
     })
-    const userData = localStorage.getItem("auth");
-    console.log(userData);
+    function getUserData() {
+      const userData = localStorage.getItem('auth');
+      console.log(userData);
+      // users({ userData })
+      // let { usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved } = userData
+      // console.log(usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved);
+      // const uid = randomNumber()
+      // users({ uid })
+      // users({ usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved })
+    }
+    getUserData()
   }
-
   const authenticate = (user) => {
     setAuth({ isAuthenticated: true, ...user })
-
+    
     toggleThis('isAuthMenuOpen', false)
-
+    
     let from = new URLSearchParams(location.search).get('from')
-
+    
     if (from) {
       navigate(from, { replace: true })
     } else {
       navigate(redirectTo, { replace: true })
     }
   }
+
+  // function randomNumber() {
+  //   for (let i = 0; i < 4; i++) {
+  //     let rand = Math.floor(Math.random() * 9 + 1);
+  //     let num = []
+  //     num+=rand
+  //     console.log(rand,num);
+  //   }
+  // }
 
   return (
     <Page pageTitle='Sign Up | Northmead Bowling Club'>

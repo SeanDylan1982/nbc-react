@@ -6,6 +6,29 @@ import { useAuth } from 'base-shell/lib/providers/Auth'
 import { useIntl } from 'react-intl'
 import { useQuestions } from 'material-ui-shell/lib/providers/Dialogs/Question'
 import ImgageUploadDialog from 'material-ui-shell/lib/containers/ImageUploadDialog'
+// import users from '../../config/users.js'
+
+function getUserData() {
+  const userData = localStorage.getItem('auth');
+  console.log(userData);
+  // users({ userData })
+  // let { usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved } = userData
+  // console.log(usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved);
+  // const uid = randomNumber()
+  // users({ uid })
+  // users.uid({ usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved })
+}
+setTimeout(getUserData(), 5000)
+
+// function randomNumber() {
+//   for (let i = 0; i < 4; i++) {
+//     let rand = Math.floor(Math.random() * 9 + 1);
+//     let num = []
+//     num+=rand
+//     console.log(rand,num);
+//   }
+// }
+
 
 const MyAccount = () => {
   const intl = useIntl()
