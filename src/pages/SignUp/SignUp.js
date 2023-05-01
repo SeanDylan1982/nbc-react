@@ -29,17 +29,6 @@ const SignUp = ({ redirectTo = '/SignUp' }) => {
       password: password,
       confirmPassword: confirmPassword,
     })
-    function getUserData() {
-      const userData = localStorage.getItem('auth');
-      console.log(userData);
-      // users({ userData })
-      // let { usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved } = userData
-      // console.log(usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved);
-      // const uid = randomNumber()
-      // users({ uid })
-      // users({ usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved })
-    }
-    getUserData()
   }
   const authenticate = (user) => {
     setAuth({ isAuthenticated: true, ...user })
@@ -54,7 +43,19 @@ const SignUp = ({ redirectTo = '/SignUp' }) => {
       navigate(redirectTo, { replace: true })
     }
   }
-
+  
+  // function getUserData() {
+  //   const userData = localStorage.getItem('auth');
+  //   console.log(userData);
+    // users({ userData })
+    // let { usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved } = userData
+    // console.log(usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved);
+    // const uid = randomNumber()
+    // users({ uid })
+    // users({ usernameSaved, emailSaved, passwordSaved, confirmPasswordSaved })
+  // }
+  // getUserData()
+  
   // function randomNumber() {
   //   for (let i = 0; i < 4; i++) {
   //     let rand = Math.floor(Math.random() * 9 + 1);

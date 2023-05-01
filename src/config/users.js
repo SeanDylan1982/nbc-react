@@ -7,4 +7,5 @@ const users = [
     "confirmPasswordSaved": ""
   }
 ]
-console.log(users);
+// console.log(users);
+export default users
