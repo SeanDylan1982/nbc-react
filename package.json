@@ -37,7 +37,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build \nnpm install -g serve \nserve -s -C build -l tcp://https://nbc-react.netlify.app/",
+    "build": "react-scripts build \nserve -s build -C -l tcp://https://nbc-react.netlify.app/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
