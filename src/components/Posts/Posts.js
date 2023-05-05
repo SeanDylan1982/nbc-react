@@ -35,62 +35,62 @@ export default function Posts() {
     setExpanded(!expanded);
   };
 
-  for (let i = 0; i < postDetails.length; i++) {
-    let post = postDetails[i];
-    return (
-      <Card sx={{ maxWidth: '100%' }}>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="{userDetails.username}">
-              {userDetails.image}
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title={post.title}
-          subheader=""
-        />
-        <CardMedia
-          component="img"
-          height="194"
-          image="{post.image}"
-          alt="{post.title}"
-        />
+  let { uid, userImage } = userDetails;
+  let { postTitle, postBody, postImage } = postDetails;
+
+  return (
+    <Card sx={{ maxWidth: '100%' }}>
+      <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label={uid}>
+            {userImage}
+          </Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
+            <MoreVertIcon />
+          </IconButton>
+        }
+        title={postTitle}
+        subheader=""
+      />
+      <CardMedia
+        component="img"
+        height="194"
+        image={postImage}
+        alt={postTitle}
+      />
+      <CardContent>
+        <Typography variant="body2" color="text.secondary">
+          {postBody}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon />
+        </IconButton>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+        <ExpandMore
+          expand={expanded}
+          onClick={handleExpandClick}
+          aria-expanded={expanded}
+          aria-label="show more"
+        >
+          <ExpandMoreIcon />
+        </ExpandMore>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {post.body}
+          <Typography paragraph>
+            {postTitle}
+          </Typography>
+          <Typography paragraph>
+            {postBody}
           </Typography>
         </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-          <ExpandMore
-            expand={expanded}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label="show more"
-          >
-            <ExpandMoreIcon />
-          </ExpandMore>
-        </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography paragraph>
-              {post.title}
-            </Typography>
-            <Typography paragraph>
-              {post.body}
-            </Typography>
-          </CardContent>
-        </Collapse>
-      </Card>
-    );
-  }
+      </Collapse>
+    </Card>
+  );
 }

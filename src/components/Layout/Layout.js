@@ -30,9 +30,9 @@ export default function AutoGrid() {
         </Grid>
         <Grid item xs={7}>
           <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '0', overflow: 'scroll' }}>
-            <Autocomplete />
-            <Posts />
-            <CreatePost />
+            <Autocomplete  />
+            <Posts  />
+            <CreatePost  />
           </Item>
         </Grid>
         <Grid item xs={2.5}>
