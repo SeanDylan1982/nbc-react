@@ -5,8 +5,8 @@ console.log(userData);
 
 export default async function handler(request, response) {
   // const { Username, Email, Password, ConfirmPassword, Club, District, Position, Skill, Experience, Social, Competition, League } = request;
-  // const connectionString = "postgresql://SeanDylan1982:L2Uo6JhzZHbD@ep-patient-river-074563.eu-central-1.aws.neon.tech/neondb";
-  const client = await db.connect(".env.production.POSTGRES_URL");
+  const connectionString = ".env.production.POSTGRES_URL";
+  const client = await db.connect(connectionString);
   try {
     await client.sql`CREATE TABLE Users ( Username varchar(255), Email varchar(255), Password varchar(255), ConfirmPassword varchar(255), Club varchar(255), District varchar(255), Position varchar(255), Skill varchar(255), Experience varchar(255), Social varchar(255), Competition varchar(255), League varchar(255) );`;
 
