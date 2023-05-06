@@ -1,10 +1,12 @@
 import { db } from "@vercel/postgres";
+import users from "./users";
 
 const userData = localStorage.getItem("auth");
 console.log(userData);
+const { Username, Email, Password, ConfirmPassword, Club, District, Position, Skill, Experience, Social, Competition, League } = userData;
+users({Username, Email, Password, ConfirmPassword, Club, District, Position, Skill, Experience, Social, Competition, League})
 
 export default async function handler(request, response) {
-  // const { Username, Email, Password, ConfirmPassword, Club, District, Position, Skill, Experience, Social, Competition, League } = request;
   const connectionString = "process.env.POSTGRES_URL";
   const client = await db.connect(connectionString);
   try {
