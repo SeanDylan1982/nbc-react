@@ -10,7 +10,7 @@ import { useTheme } from '@mui/material/styles'
 import CustomPaper from '../../components/CustomPaper'
 // import AppBar from '../../components/AppBar/AppBar'
 
-const SignIn = ({ redirectTo = '/SignIn' }) => {
+const SignIn = ({ redirectTo = '/' }) => {
   const intl = useIntl()
   const theme = useTheme()
   const navigate = useNavigate()

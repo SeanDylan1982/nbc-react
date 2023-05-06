@@ -10,8 +10,9 @@ import CustomPaper from '../../components/CustomPaper'
 // import AppBar from '../../components/AppBar/AppBar'
 // import users from '../../config/users.js'
 // import userDetails from '../../config/userDetails'
+import handler from '../../config/Page'
 
-const SignUp = ({ redirectTo = '/SignUp' }) => {
+const SignUp = ({ redirectTo = '/' }) => {
   const intl = useIntl()
   const navigate = useNavigate()
   const location = useLocation()
@@ -31,8 +32,11 @@ const SignUp = ({ redirectTo = '/SignUp' }) => {
       password: password,
       confirmPassword: confirmPassword,
     })
-    // userDetails("username", "email", "password", "confirmPassword")
+    handler()
+    const userData = localStorage.getItem("auth");
+    console.log(userData);
   }
+  
   const authenticate = (user) => {
     setAuth({ isAuthenticated: true, ...user })
     
