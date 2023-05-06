@@ -5,7 +5,7 @@ console.log(userData);
 
 export default async function handler(request, response) {
   // const { Username, Email, Password, ConfirmPassword, Club, District, Position, Skill, Experience, Social, Competition, League } = request;
-  const connectionString = "postgres://default:rbc1eqQ2lmEo@ep-misty-shape-441597-pooler.eu-central-1.postgres.vercel-storage.com:5432/verceldb";
+  const connectionString = "postgresql://SeanDylan1982:L2Uo6JhzZHbD@ep-patient-river-074563.eu-central-1.aws.neon.tech/neondb";
   const client = await db.connect(connectionString);
   try {
     await client.sql`CREATE TABLE Users ( Username varchar(255), Email varchar(255), Password varchar(255), ConfirmPassword varchar(255), Club varchar(255), District varchar(255), Position varchar(255), Skill varchar(255), Experience varchar(255), Social varchar(255), Competition varchar(255), League varchar(255) );`;
