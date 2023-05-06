@@ -11,7 +11,7 @@ import { Divider } from '@mui/material';
 // import CreatePost from '../../components/Posts/CreatePost'
 import MyAccount from '../../pages/MyAccount/MyAccount'
 import ProfileForm from 'components/ProfileForm/ProfileForm';
-import LoginButton from '../../components/LoginButton'
+import LoginButton from '../../components/LoginButton/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

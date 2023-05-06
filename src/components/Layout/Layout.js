@@ -10,7 +10,7 @@ import Links from 'components/Links/Links'
 import { Divider } from '@mui/material';
 import CreatePost from '../../components/Posts/CreatePost'
 import Posts from '../../components/Posts/Posts'
-import LoginButton from '../../components/LoginButton'
+import LoginButton from '../../components/LoginButton/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',

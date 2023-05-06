@@ -9,7 +9,7 @@ import Members from '../Members/Members'
 import Contact from 'components/Contact/Contact'
 import Links from 'components/Links/Links'
 import { Divider } from '@mui/material'
-import LoginButton from '../../components/LoginButton'
+import LoginButton from '../../components/LoginButton/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
