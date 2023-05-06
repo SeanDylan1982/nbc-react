@@ -6,7 +6,6 @@ import handler from '../../config/Page'
 
 const userData = localStorage.getItem("auth");
 console.log(userData);
-
 handler();
 
 const ProfilePage = () => {

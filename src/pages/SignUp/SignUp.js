@@ -1,14 +1,14 @@
 import { Button, TextField, Typography } from '@mui/material'
-import Page from 'material-ui-shell/lib/containers/Page'
+import Page from 'material-ui-shell/lib/containers/Page/index'
 import React, { useState } from 'react'
-import { useAuth } from 'base-shell/lib/providers/Auth'
+import { useAuth } from 'base-shell/lib/providers/Auth/index'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useIntl } from 'react-intl'
-import { useMenu } from 'material-ui-shell/lib/providers/Menu'
+import { useMenu } from 'material-ui-shell/lib/providers/Menu/index'
 import { useTheme } from '@mui/material/styles'
 import CustomPaper from '../../components/CustomPaper'
 // import AppBar from '../../components/AppBar/AppBar'
-// import users from '../../config/users.js'
+import users from '../../config/users.js'
 // import userDetails from '../../config/userDetails'
 import handler from '../../config/Page'
 
@@ -32,9 +32,10 @@ const SignUp = ({ redirectTo = '/' }) => {
       password: password,
       confirmPassword: confirmPassword,
     })
-    handler()
     const userData = localStorage.getItem("auth");
+    users({userData})
     console.log(userData);
+    handler()
   }
   
   const authenticate = (user) => {
