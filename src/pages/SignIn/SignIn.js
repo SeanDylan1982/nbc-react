@@ -1,16 +1,16 @@
 import { Button, TextField, Typography } from '@mui/material'
-import Page from 'material-ui-shell/lib/containers/Page/index'
+import Page from 'material-ui-shell/lib/containers/Page'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from 'base-shell/lib/providers/Auth/index'
+import { useAuth } from 'base-shell/lib/providers/Auth'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useIntl } from 'react-intl'
-import { useMenu } from 'material-ui-shell/lib/providers/Menu/index'
+import { useMenu } from 'material-ui-shell/lib/providers/Menu'
 import { useTheme } from '@mui/material/styles'
 import CustomPaper from '../../components/CustomPaper'
 // import AppBar from '../../components/AppBar/AppBar'
 
-const SignIn = ({ redirectTo = '/' }) => {
+const SignIn = ({ redirectTo = '/SignIn' }) => {
   const intl = useIntl()
   const theme = useTheme()
   const navigate = useNavigate()
@@ -49,7 +49,7 @@ const SignIn = ({ redirectTo = '/' }) => {
       {/* <AppBar /> */}
       <CustomPaper elevation={6}>
         <div
-          sytle={{
+          style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -61,7 +61,7 @@ const SignIn = ({ redirectTo = '/' }) => {
             {intl.formatMessage({ id: 'sign_in' })}
           </Typography>
           <form
-            sytle={{ marginTop: theme.spacing(1) }}
+            style={{ marginTop: theme.spacing(1) }}
             onSubmit={handleSubmit}
             noValidate
           >

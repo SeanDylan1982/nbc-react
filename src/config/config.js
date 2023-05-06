@@ -16,7 +16,7 @@ const config = {
     Menu: lazy(() => import('material-ui-shell/lib/containers/Menu/Menu')),
   },
   auth: {
-    signInURL: '/signin',
+    signInURL: '/SignIn',
   },
   pwa: {
     useiOSPWAPrompt: true,

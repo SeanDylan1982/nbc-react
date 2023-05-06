@@ -15,16 +15,16 @@ const Constitution = lazy(() => import('../pages/Constitution/Constitution'))
 const Directions = lazy(() => import('../pages/Directions/Directions'))
 const Popia = lazy(() => import('../pages/Popia/Popia'))
 const Contact = lazy(() => import('../pages/Contact/Contact'))
-const DialogDemo = lazy(() => import('../pages/DialogDemo/DialogDemo'))
-const ToastDemo = lazy(() => import('../pages/ToastDemo/ToastDemo'))
-const FilterDemo = lazy(() => import('../pages/FilterDemo'))
-const ListPageDemo = lazy(() => import('../pages/ListPageDemo'))
-const TabsDemo = lazy(() => import('../pages/TabsDemo'))
-const Profile = lazy(() => import('../../src/pages/Profile/Profile.js'))
+// const DialogDemo = lazy(() => import('../pages/DialogDemo/DialogDemo'))
+// const ToastDemo = lazy(() => import('../pages/ToastDemo/ToastDemo'))
+// const FilterDemo = lazy(() => import('../pages/FilterDemo'))
+// const ListPageDemo = lazy(() => import('../pages/ListPageDemo'))
+// const TabsDemo = lazy(() => import('../pages/TabsDemo'))
+const Profile = lazy(() => import('../pages/Profile/Profile'))
 
 const routes = [
   {
-    path: '/signin',
+    path: '/SignIn',
     exact: true,
     element: (
       <UnauthorizedRoute>
@@ -33,7 +33,7 @@ const routes = [
     ),
   },
   {
-    path: '/signup',
+    path: '/SignUp',
     exact: true,
     element: (
       <UnauthorizedRoute>
@@ -198,51 +198,51 @@ const routes = [
       </UnauthorizedRoute>
     ),
   },
-  {
-    path: '/dialog_demo',
-    exact: true,
-    element: (
-      <AuthorizedRoute>
-        <DialogDemo />
-      </AuthorizedRoute>
-    ),
-  },
-  {
-    path: '/toast_demo',
-    exact: true,
-    element: (
-      <AuthorizedRoute>
-        <ToastDemo />
-      </AuthorizedRoute>
-    ),
-  },
-  {
-    path: '/filter_demo',
-    exact: true,
-    element: (
-      <AuthorizedRoute>
-        <FilterDemo />
-      </AuthorizedRoute>
-    ),
-  },
-  {
-    path: '/list_page_demo',
-    exact: true,
-    element: (
-      <AuthorizedRoute>
-        <ListPageDemo />
-      </AuthorizedRoute>
-    ),
-  },
-  {
-    path: '/tabs_demo',
-    exact: true,
-    element: (
-      <AuthorizedRoute>
-        <TabsDemo />
-      </AuthorizedRoute>
-    ),
-  },
+  // {
+  //   path: '/dialog_demo',
+  //   exact: true,
+  //   element: (
+  //     <AuthorizedRoute>
+  //       <DialogDemo />
+  //     </AuthorizedRoute>
+  //   ),
+  // },
+  // {
+  //   path: '/toast_demo',
+  //   exact: true,
+  //   element: (
+  //     <AuthorizedRoute>
+  //       <ToastDemo />
+  //     </AuthorizedRoute>
+  //   ),
+  // },
+  // {
+  //   path: '/filter_demo',
+  //   exact: true,
+  //   element: (
+  //     <AuthorizedRoute>
+  //       <FilterDemo />
+  //     </AuthorizedRoute>
+  //   ),
+  // },
+  // {
+  //   path: '/list_page_demo',
+  //   exact: true,
+  //   element: (
+  //     <AuthorizedRoute>
+  //       <ListPageDemo />
+  //     </AuthorizedRoute>
+  //   ),
+  // },
+  // {
+  //   path: '/tabs_demo',
+  //   exact: true,
+  //   element: (
+  //     <AuthorizedRoute>
+  //       <TabsDemo />
+  //     </AuthorizedRoute>
+  //   ),
+  // },
 ]
 
 export default routes

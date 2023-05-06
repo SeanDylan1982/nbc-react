@@ -10,6 +10,7 @@ import Links from 'components/Links/Links'
 import { Divider } from '@mui/material';
 import CreatePost from '../../components/Posts/CreatePost'
 import Posts from '../../components/Posts/Posts'
+import LoginButton from '../../components/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -37,6 +38,7 @@ export default function AutoGrid() {
         </Grid>
         <Grid item xs={2.5}>
           <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
+            <LoginButton />
             <BusinessCard />
             <Divider />
             <Members />
