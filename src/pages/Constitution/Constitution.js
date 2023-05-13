@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutConstitution from '../../components/Layout/LayoutConstitution'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const ConstitutionPage = () => {
 
@@ -11,6 +12,7 @@ const ConstitutionPage = () => {
       <AppBar />
       <LayoutConstitution />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }

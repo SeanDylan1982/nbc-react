@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutCardings from '../../components/Layout/LayoutCardings'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const CardingsPage = () => {
 
@@ -11,6 +12,7 @@ const CardingsPage = () => {
       <AppBar />
       <LayoutCardings />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }

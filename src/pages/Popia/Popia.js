@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutPopia from '../../components/Layout/LayoutPopia'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const PopiaPage = () => {
 
@@ -11,6 +12,7 @@ const PopiaPage = () => {
       <AppBar />
       <LayoutPopia />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }

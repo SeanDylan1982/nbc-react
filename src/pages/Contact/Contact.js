@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutContact from '../../components/Layout/LayoutContact'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const ContactPage = () => {
 
@@ -11,6 +12,7 @@ const ContactPage = () => {
       <AppBar />
       <LayoutContact />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }

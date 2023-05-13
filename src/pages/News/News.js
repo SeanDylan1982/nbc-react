@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutNews from '../../components/Layout/LayoutNews'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const NewsPage = () => {
 
@@ -11,6 +12,7 @@ const NewsPage = () => {
       <AppBar />
       <LayoutNews />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }

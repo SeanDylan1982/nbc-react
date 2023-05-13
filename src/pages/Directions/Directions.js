@@ -3,6 +3,7 @@ import React from 'react'
 import LayoutDirections from '../../components/Layout/LayoutDirections'
 import AppBar from '../../components/AppBar/AppBar'
 import LabelBottomNavigation from '../../components/BottomNavigation/BottomNavigation';
+import { Analytics } from '@vercel/analytics/react';
 
 const DirectionsPage = () => {
 
@@ -11,6 +12,7 @@ const DirectionsPage = () => {
       <AppBar />
       <LayoutDirections />
       <LabelBottomNavigation />
+      <Analytics />
     </Page>
   )
 }
