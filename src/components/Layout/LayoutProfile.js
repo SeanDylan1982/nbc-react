@@ -26,19 +26,19 @@ export default function LayoutProfile() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
         <Grid item xs={2.5}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '4px', marginRight: '0' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '4px', marginRight: '0' }}>
             <Links />
           </Item>
         </Grid>
         <Grid item xs={7}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '0', overflow: 'scroll' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '0', marginRight: '0', overflow: 'scroll' }}>
             <Autocomplete />
             <MyAccount elevation={6} style={{ position: 'relative', top: '-200px' }} />
             <ProfileForm elevation={6} style={{ position: 'relative', top: '-2px' }} />
           </Item>
         </Grid>
         <Grid item xs={2.5}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
             <LoginButton />
             <BusinessCard />
             <Divider />

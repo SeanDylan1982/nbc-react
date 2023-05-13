@@ -29,7 +29,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = ['../../../public/img/gallery/nbc-pg2022/nbc-pg2022-1.jpg', '../../../public/img/gallery/nbc-pg2022/nbc-pg2022-2.jpg'];
 
 const theme = createTheme();
 
@@ -47,15 +47,15 @@ export default function Album() {
       </AppBar> */}
       <main>
         {/* Hero unit */}
-        <Box
+        {/* <Box
           sx={{
             bgcolor: 'background.paper',
             pt: 8,
             pb: 6,
           }}
-        >
-          <Container maxWidth="lg">
-            <Typography
+        > */}
+          {/* <Container maxWidth="lg"> */}
+            {/* <Typography
               component="h1"
               variant="h2"
               align="center"
@@ -66,7 +66,7 @@ export default function Album() {
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
               A collection of memories over the years
-            </Typography>
+            </Typography> */}
             {/* <Stack
               sx={{ pt: 4 }}
               direction="row"
@@ -76,8 +76,8 @@ export default function Album() {
               <Button variant="contained">Main call to action</Button>
               <Button variant="outlined">Secondary action</Button>
             </Stack> */}
-          </Container>
-        </Box>
+          {/* </Container> */}
+        {/* </Box> */}
         <Container sx={{ py: 2 }} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={4}>
@@ -92,7 +92,7 @@ export default function Album() {
                       // 16:9
                       pt: '56.25%',
                     }}
-                    image="https://source.unsplash.com/random"
+                    image={card}
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>

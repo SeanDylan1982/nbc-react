@@ -8,8 +8,8 @@ import BusinessCard from '../BusinessCard/BusinessCard'
 import Members from '../Members/Members'
 import Links from 'components/Links/Links'
 import { Divider } from '@mui/material';
-import CreatePost from '../../components/Posts/CreatePost'
-import Posts from '../../components/Posts/Posts'
+// import CreatePost from '../../components/Posts/CreatePost'
+// import Posts from '../../components/Posts/Posts'
 import LoginButton from '../../components/LoginButton/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,19 +25,19 @@ export default function AutoGrid() {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
         <Grid item xs={2.5}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '4px', marginRight: '0' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '4px', marginRight: '0' }}>
             <Links />
           </Item>
         </Grid>
         <Grid item xs={7}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '0', overflow: 'scroll', scrollBar: 'none' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '0', marginRight: '0', overflow: 'scroll', scrollBar: 'none' }}>
             <Autocomplete  />
-            <Posts  />
-            <CreatePost  />
+            {/* <Posts  /> */}
+            {/* <CreatePost  /> */}
           </Item>
         </Grid>
         <Grid item xs={2.5}>
-          <Item elevation={6} style={{ height: '92vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
+          <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
             <LoginButton />
             <BusinessCard />
             <Divider />
