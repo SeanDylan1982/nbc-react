@@ -31,7 +31,7 @@ export default function Popia() {
           },
         }}
       >
-          <div class="disclaimer hidden" id="popi-disclaimer">
+          <div class="disclaimer" id="popi-disclaimer">
             <h2>Protection of Personal Information Act Notice</h2>
             <p>
               Northmead Bowing club, the company who “owns” this website we wish

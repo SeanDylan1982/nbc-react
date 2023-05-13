@@ -11,7 +11,7 @@ import { Divider } from '@mui/material';
 // import CreatePost from '../../components/Posts/CreatePost'
 import MyAccount from '../../pages/MyAccount/MyAccount'
 import ProfileForm from 'components/ProfileForm/ProfileForm';
-import LoginButton from '../../components/LoginButton/LoginButton'
+// import LoginButton from '../../components/LoginButton/LoginButton'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -39,7 +39,7 @@ export default function LayoutProfile() {
         </Grid>
         <Grid item xs={2.5}>
           <Item elevation={6} style={{ height: '85vh', marginTop: '4px', marginLeft: '0', marginRight: '4px' }}>
-            <LoginButton />
+            {/* <LoginButton /> */}
             <BusinessCard />
             <Divider />
             <Members />
