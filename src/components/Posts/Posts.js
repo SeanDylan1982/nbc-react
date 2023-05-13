@@ -28,22 +28,16 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Posts() {
-  const [expanded, setExpanded] = React.useState(false);
+let timeline = []
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
-  let { uid, userImage } = userDetails;
-  let { postTitle, postBody, postImage } = postDetails;
-
-  return (
+for (let i = 0; i < postDetails.length; i++) {
+  let { userImage, uid, postTitle, postImage, postBody } = this
+  let postContent = `
     <Card sx={{ maxWidth: '100%' }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label={uid}>
-            {userImage}
+          <Avatar sx={{ bgcolor: red[500] }} aria-label=${uid}>
+            ${userImage}
           </Avatar>
         }
         action={
@@ -51,18 +45,18 @@ export default function Posts() {
             <MoreVertIcon />
           </IconButton>
         }
-        title={postTitle}
+        title=${postTitle}
         subheader=""
       />
       <CardMedia
         component="img"
         height="194"
-        image={postImage}
+        image=${postImage}
         alt={postTitle}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          {postBody}
+          ${postBody}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -84,13 +78,29 @@ export default function Posts() {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>
-            {postTitle}
+            ${postTitle}
           </Typography>
           <Typography paragraph>
-            {postBody}
+            ${postBody}
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
+  `
+  timeline += postContent
+}
+
+export default function Posts() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
+
+  let { uid, userImage } = userDetails;
+  let { postTitle, postBody, postImage } = postDetails;
+
+  return (
+    `timeline`
   );
 }
