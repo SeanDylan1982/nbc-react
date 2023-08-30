@@ -22,7 +22,7 @@
     "lightbox": "^0.5.0",
     "lp-react-virtualized-auto-sizer-react-18": "^1.0.7",
     "material-ui-shell": "^3.4.9",
-    "mongodb": "^5.5.0",
+    "mongodb": "^5.8.0",
     "multer": "^1.4.5-lts.1",
     "notistack": "^2.0.8",
     "psql": "^0.0.1",
